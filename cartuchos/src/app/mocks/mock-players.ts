@@ -1,0 +1,26 @@
+import { Player } from '../player';
+
+export const PLAYERS: Player[] = [
+    { id: 1, name: 'Yair Saal', nickName: 'Yair' },
+    { id: 2, name: 'David Schupauk', nickName: 'Davo' },
+    { id: 3, name: 'Matias Kancyper', nickName: 'Poroto' },
+    { id: 4, name: 'Dan Saal', nickName: 'Dan' },
+    { id: 5, name: 'Ariel Sztajn', nickName: 'Flaca' },
+    { id: 6, name: 'Alex Douer', nickName: 'Douer' },
+    { id: 7, name: 'Brandon Slepicki', nickName: 'Brandon' },
+    { id: 8, name: 'Pablo Brudny', nickName: 'Pablo' },
+    { id: 9, name: 'Tomy Gamberg', nickName: 'Tomy G' },
+    { id: 10, name: 'Julian Plaksin', nickName: 'Plaksin' },
+    { id: 11, name: 'Martin Sneider', nickName: 'Marto' },
+    { id: 12, name: 'Julian Leisner', nickName: 'Leisner' },
+    { id: 13, name: 'Jeremy Bacher', nickName: 'Jere' },
+    { id: 14, name: 'Nicolas David', nickName: 'Nico D' },
+    { id: 15, name: 'Gastón Harari', nickName: 'Negro' },
+    { id: 16, name: 'Matias Beraja', nickName: 'Tute' },
+    { id: 17, name: 'Manuel Setton', nickName: 'Manu' },
+    { id: 18, name: 'Tomas Milmar', nickName: 'Tomi M' },
+    { id: 19, name: 'Ivan Niebieskikwiat', nickName: 'Ivo' },
+    { id: 20, name: 'Martin Sztajn', nickName: 'Sarto' },
+    { id: 21, name: 'Jonatan Cohen', nickName: 'Joni' },
+    { id: 22, name: 'Nicolas Vindver', nickName: 'Nico V' },
+];
