@@ -1,0 +1,9 @@
+<h3>FORMACIONES</h3>
+
+<ul class="formations">
+  <li *ngFor="let formation of formations" [class.selected]="formation === selectedFormation" (click)="onSelect(formation)">
+    <span class="badge">{{formation?.id}}</span> <span>{{formation?.name}}</span>
+  </li>
+</ul>
+
+<app-formation-detail [formation]="selectedFormation"></app-formation-detail>

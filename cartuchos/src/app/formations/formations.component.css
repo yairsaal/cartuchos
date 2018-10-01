@@ -1,15 +1,15 @@
-/* PlayersComponent's private CSS styles */
+/* formationsComponent's private CSS styles */
 .selected {
     background-color: rgb(230, 211, 172) !important;
     color: #607D8B;
   }
-  .players {
+  .formations {
     margin: 0 0 2em 0;
     list-style-type: none;
     padding: 0;
     width: 15em;
   }
-  .players li {
+  .formations li {
     cursor: pointer;
     position: relative;
     left: 0;
@@ -19,20 +19,20 @@
     height: 1.6em;
     border-radius: 4px;
   }
-  .players li.selected:hover {
+  .formations li.selected:hover {
     background-color: #ecb47f !important;
     color: #607D8B;
   }
-  .players li:hover {
+  .formations li:hover {
     color: #607D8B;
     background-color: #DDD;
     left: .1em;
   }
-  .players .text {
+  .formations .text {
     position: relative;
     top: -3px;
   }
-  .players .badge {
+  .formations .badge {
     display: inline-block;
     font-size: small;
     color: white;

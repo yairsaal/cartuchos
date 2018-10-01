@@ -5,11 +5,19 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AppComponent } from './app.component';
 import { PlayersComponent } from './players/players.component';
 import { NgbRadio, NgbRadioGroup } from '@ng-bootstrap/ng-bootstrap/buttons/radio';
+import { PlayerDetailComponent } from './player-detail/player-detail.component';
+import { MessagesComponent } from './messages/messages.component';
+import { FormationsComponent } from './formations/formations.component';
+import { FormationDetailComponent } from './formation-detail/formation-detail.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    PlayersComponent
+    PlayersComponent,
+    PlayerDetailComponent,
+    MessagesComponent,
+    FormationsComponent,
+    FormationDetailComponent
   ],
   imports: [
     BrowserModule,
