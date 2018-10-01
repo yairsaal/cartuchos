@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Player } from '../player';
-import { PLAYERS } from '../mocks/mock-players';
+import { PlayerService } from '../player.service';
 
 @Component({
   selector: 'app-players',
@@ -9,28 +9,22 @@ import { PLAYERS } from '../mocks/mock-players';
 })
 export class PlayersComponent implements OnInit {
 
-  players = PLAYERS;
-
   selectedPlayer: Player;
-  onEditMode = false;
-  constructor() {
-    this.selectedPlayer = {
-      name: '',
-      nickName: '',
-      id: null
-    };
+
+  players: Player[];
+
+  constructor(private playerService: PlayerService) {  }
+
+  ngOnInit() {
+    this.getPlayers();
   }
 
   onSelect(player: Player): void {
     this.selectedPlayer = player;
   }
 
-  edit(player: Player): void {
-    this.onEditMode = !this.onEditMode;
+  getPlayers(): void {
+    this.playerService.getPlayers()
+      .subscribe(players => this.players = players);
   }
-
-
-  ngOnInit() {
-  }
-
 }

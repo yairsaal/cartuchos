@@ -1,0 +1,20 @@
+<div *ngIf="player">
+  <h3>{{player.name | uppercase}}</h3>
+  <div><span>Id: </span>{{player?.id}}</div>
+  <div *ngIf="!onEditMode;else editFields">
+    <div><span>Nombre: </span>{{player?.name}}</div>
+    <div><span>Apodo: </span>{{player?.nickName}}</div>
+  </div>
+  
+  <label><input class="btn-primary" type="button" value="Editar" *ngIf="!onEditMode" (click)="edit(player)"></label>
+  <div><button class="btn-primary" type="button" *ngIf="onEditMode" (click)="edit(player)">Guardar</button></div>
+  
+  <ng-template #editFields>
+    <label>
+      Nombre: <input [(ngModel)]="player.name" placeholder="Nombre">
+    </label><br>
+    <label>
+      Apodo: <input [(ngModel)]="player.nickName" placeholder="Apodo">
+    </label>
+  </ng-template>  
+</div>
