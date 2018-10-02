@@ -13,6 +13,8 @@ export class PlayersComponent implements OnInit {
 
   players: Player[];
 
+  citedPlayers: Player[];
+
   constructor(private playerService: PlayerService) {  }
 
   ngOnInit() {

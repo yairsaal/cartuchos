@@ -2,7 +2,7 @@
 
 <ul class="players">
   <li *ngFor="let player of players" [class.selected]="player === selectedPlayer" (click)="onSelect(player)">
-    <span class="badge">{{player?.id}}</span> <span>{{player?.nickName}}</span>
+    <div><span class="badge">{{player?.id}}</span> <span class="badge-secondary"><input type="checkbox" name="selected" value="selected"></span> <span>{{player?.nickName}}</span></div>
   </li>
 </ul>
 

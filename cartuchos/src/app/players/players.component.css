@@ -16,7 +16,7 @@
     background-color: #EEE;
     margin: .5em;
     padding: .3em 0;
-    height: 1.6em;
+    height: 2em;
     border-radius: 4px;
   }
   .players li.selected:hover {
@@ -40,9 +40,23 @@
     background-color: #607D8B;
     line-height: 1em;
     position: relative;
-    left: -1px;
-    top: -4px;
-    height: 1.8em;
+    left: 2px;
+    top: -6px;
+    height: 2.5em;
     margin-right: .8em;
     border-radius: 4px 0 0 4px;
+  }
+  .players .badge-secondary {
+    display: inline-block;
+    font-size: small;
+    color: white;
+    padding: 0.8em 0.7em 0 0.7em;
+    background-color: #607D8B;
+    line-height: 1em;
+    position: relative;
+    left: 150px;
+    top: -4px;
+    height: 2.5em;
+    margin-left: .8em;
+    border-radius: 0 4px 4px 0;
   }
