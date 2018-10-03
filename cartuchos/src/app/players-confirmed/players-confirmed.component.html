@@ -1,0 +1,9 @@
+<h3>CONFIRMADOS</h3>
+
+<tr>
+  <ol class="players">
+    <li *ngFor="let player of confirmedPlayers" [class.selected]="player === selectedPlayer" (click)="onSelect(player)">
+      <div><span class="badge">{{player?.id}}</span> <span class="badge-secondary"><input class="input" type="checkbox" name={{player?.id}} value={{player?.id}}></span> <span>{{player?.nickName}}</span></div>
+    </li>
+  </ol>
+</tr>

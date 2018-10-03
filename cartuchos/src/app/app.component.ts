@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Player } from './player';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Cartuchos';
+  playerSelected: Player[];
+  getSelectedPlayer(players: Player[]) {
+    this.playerSelected = players;
+  }
 }

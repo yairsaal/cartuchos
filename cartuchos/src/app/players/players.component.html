@@ -1,9 +1,19 @@
 <h3>JUGADORES</h3>
 
-<ul class="players">
-  <li *ngFor="let player of players" [class.selected]="player === selectedPlayer" (click)="onSelect(player)">
-    <div><span class="badge">{{player?.id}}</span> <span class="badge-secondary"><input type="checkbox" name="selected" value="selected"></span> <span>{{player?.nickName}}</span></div>
-  </li>
-</ul>
+<tr>
+  <ol class="players">
+    <li *ngFor="let player of players" [class.selected]="player === selectedPlayer" (click)="onSelect(player)">
+      <div>
+        <span class="badge">{{player?.id}}</span>
+        <span class="badge-secondary">
+          <input class="input" type="checkbox" #playerCheckbox (change)="onChecked(player, playerCheckbox)">
+        </span>
+        <span>{{player?.nickName}}</span>
+      </div>
+    </li>
+  </ol>
+</tr>
 
-<app-player-detail [player]="selectedPlayer"></app-player-detail>
+<tr>
+  <app-player-detail [player]="selectedPlayer"></app-player-detail>
+</tr>

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ElementRef, Output, EventEmitter } from '@angular/core';
 import { Player } from '../player';
 import { PlayerService } from '../player.service';
 
@@ -13,9 +13,12 @@ export class PlayersComponent implements OnInit {
 
   players: Player[];
 
-  citedPlayers: Player[];
+  confirmedPlayers: Player[];
+  @Output() sendPlayers = new EventEmitter<Player[]>();
 
-  constructor(private playerService: PlayerService) {  }
+  constructor(private playerService: PlayerService) {
+    this.confirmedPlayers = [];
+  }
 
   ngOnInit() {
     this.getPlayers();
@@ -23,6 +26,16 @@ export class PlayersComponent implements OnInit {
 
   onSelect(player: Player): void {
     this.selectedPlayer = player;
+  }
+
+  onChecked(player: Player, checkbox: HTMLFormElement): void {
+    if (checkbox.checked) {
+      this.confirmedPlayers.push(player);
+      this.sendPlayers.emit(this.confirmedPlayers);
+    } else {
+      this.confirmedPlayers.splice(player.id, 1);
+      this.sendPlayers.emit(this.confirmedPlayers);
+    }
   }
 
   getPlayers(): void {
