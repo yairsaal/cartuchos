@@ -9,6 +9,7 @@ import { PlayerDetailComponent } from './player-detail/player-detail.component';
 import { MessagesComponent } from './messages/messages.component';
 import { FormationsComponent } from './formations/formations.component';
 import { FormationDetailComponent } from './formation-detail/formation-detail.component';
+import { PlayersConfirmedComponent } from './players-confirmed/players-confirmed.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { FormationDetailComponent } from './formation-detail/formation-detail.co
     PlayerDetailComponent,
     MessagesComponent,
     FormationsComponent,
-    FormationDetailComponent
+    FormationDetailComponent,
+    PlayersConfirmedComponent
   ],
   imports: [
     BrowserModule,
