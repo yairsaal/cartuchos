@@ -3,11 +3,11 @@
 <table>
     <tr>
         <td>
-            <app-players (sendPlayers)="getSelectedPlayer($event)"></app-players>
+            <app-players (sendPlayers)="onSendPlayers($event)"></app-players>
         </td>
         <td> . </td>
         <td>
-            <app-players-confirmed [confirmedPlayers]="playerSelected"></app-players-confirmed>
+            <app-players-confirmed [confirmedPlayers]="confirmedPlayers"></app-players-confirmed>
         </td>
         <td> . </td>
         <td>

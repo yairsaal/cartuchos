@@ -7,4 +7,5 @@ export class Player {
     secondPosition?: string;
     side?: string;
     restriction?: string;
+    chosen: boolean;
 }

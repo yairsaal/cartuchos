@@ -8,8 +8,9 @@ import { Player } from './player';
 })
 export class AppComponent {
   title = 'Cartuchos';
-  playerSelected: Player[];
-  getSelectedPlayer(players: Player[]) {
-    this.playerSelected = players;
+  confirmedPlayers: Player[];
+
+  onSendPlayers(players: Player[]) {
+    this.confirmedPlayers = players;
   }
 }

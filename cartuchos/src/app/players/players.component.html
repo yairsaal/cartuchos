@@ -2,11 +2,11 @@
 
 <tr>
   <ol class="players">
-    <li *ngFor="let player of players" [class.selected]="player === selectedPlayer" (click)="onSelect(player)">
+    <li *ngFor="let player of players" [class.selected]="player === selectedPlayer" [class.confirmed]="player.chosen" (click)="onSelect(player)" appSelectedPlayer>
       <div>
         <span class="badge">{{player?.id}}</span>
         <span class="badge-secondary">
-          <input class="input" type="checkbox" #playerCheckbox (change)="onChecked(player, playerCheckbox)">
+          <input class="input" type="checkbox" #playerCheckbox [(ngModel)]="player.chosen" (change)="onChecked(player, playerCheckbox)">
         </span>
         <span>{{player?.nickName}}</span>
       </div>
@@ -16,4 +16,7 @@
 
 <tr>
   <app-player-detail [player]="selectedPlayer"></app-player-detail>
+</tr>
+<tr>
+  <button type="button" (click)="onAccept()">Aceptar</button>
 </tr>
