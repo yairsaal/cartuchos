@@ -11,16 +11,15 @@ export class PlayersConfirmedComponent implements OnInit, OnChanges {
 
   @Input() confirmedPlayers: Player[];
 
- constructor() {}
+ constructor() { }
 
   ngOnInit() {
-    this.getConfirmedPlayers();
   }
 
   getConfirmedPlayers(): void {
   }
 
   ngOnChanges(changes: SimpleChanges) {
-    console.log(changes);
+    this.getConfirmedPlayers();
   }
 }

@@ -29,13 +29,18 @@ export class PlayersComponent implements OnInit {
   }
 
   onChecked(player: Player, checkbox: HTMLFormElement): void {
+    const thisPlayer = this.confirmedPlayers.findIndex(x => x.id === player.id);
     if (checkbox.checked) {
       this.confirmedPlayers.push(player);
-      this.sendPlayers.emit(this.confirmedPlayers);
     } else {
-      this.confirmedPlayers.splice(player.id, 1);
-      this.sendPlayers.emit(this.confirmedPlayers);
+      this.confirmedPlayers.splice(thisPlayer, 1);
     }
+    this.confirmedPlayers.sort();
+  }
+
+  onAccept() {
+    const _confirmedPlayers = this.players.filter(player => player.chosen);
+    this.sendPlayers.emit(_confirmedPlayers);
   }
 
   getPlayers(): void {
