@@ -15,8 +15,9 @@
 </tr>
 
 <tr>
-  <app-player-detail [player]="selectedPlayer"></app-player-detail>
+  <button type="button" class="accept" (click)="onAccept()">Aceptar</button>
 </tr>
+
 <tr>
-  <button type="button" (click)="onAccept()">Aceptar</button>
+  <app-player-detail [player]="selectedPlayer"></app-player-detail>
 </tr>

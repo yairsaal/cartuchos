@@ -7,7 +7,7 @@ import { Player } from './player';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Cartuchos';
+  title = '⚽Cartuchos⚽';
   confirmedPlayers: Player[];
 
   onSendPlayers(players: Player[]) {

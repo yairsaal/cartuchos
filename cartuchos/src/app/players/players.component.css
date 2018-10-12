@@ -70,3 +70,10 @@
 {
   transform: scale(1.5);
 }
+.accept
+{
+  margin-left: .5em;
+  width: 15em;
+  background-color: #b6f3b0;
+  color: black;
+}
